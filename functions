@@ -1,0 +1,14 @@
+#!/bin/bash 
+
+## Functions
+
+# Directories
+
+#- Make a directory and cd into it 
+function mkdircd () { mkdir -p "$@" && cd "${!#}";}
+function mkcd () { mkdircd $@; } 
+
+# Navigation
+
+#- cd into a directory and ls into it
+function cdl () { cd "$@" && ls; }
