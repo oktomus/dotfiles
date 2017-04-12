@@ -1,0 +1,7 @@
+[user]
+	email = contact.kevinmasson@gmail.com
+	name = Kevin Masson
+[color]
+	ui = true
+[core]
+	editor = vim
