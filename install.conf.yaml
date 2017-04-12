@@ -6,9 +6,6 @@
     # zsh
     ~/.zshrc: zshrc
     # bash
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
     ~/.scripts: scripts
     # vim
     ~/.vimrc: vimrc
