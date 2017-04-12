@@ -14,9 +14,7 @@
     ./vim/autoload: ./distant/vim-pathogen/autoload
     ./vim/bundle/hardmode: ./distant/hardmode
     ./vim/bundle/editorconfig-vim: ./distant/editorconfig-vim
-    ./vim/bundle/base16-vim: ./distant/base16-vim
     ./zprezto: ./distant/prezto
-    ./config/base16-shell: ./distant/base16-shell
     # zprezto
     ~/.zpreztorc: zpreztorc
     ~/.zprezto: zprezto
@@ -27,9 +25,10 @@
         create: true
 
     # config
-    ~/.config/base16-shell: config/base16-shell
     ~/.config/redshift.conf: config/redshift.conf
     ~/.config/blender/2.78/config/userpref.blend: config/blender.userpref
+    # xfce
+    ~/.local/share/xfce4/terminal/colorschemes: distant/base16-xfce4-terminal/colorschemes
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [mkdir -p ~/.vim_swap ~/.vim_undo ~/.vim_backup, Creating vim dirs]

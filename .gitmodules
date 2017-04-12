@@ -10,12 +10,9 @@
 [submodule "distant/editorconfig-vim"]
 	path = distant/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
-[submodule "distant/base16-vim"]
-	path = distant/base16-vim
-	url = https://github.com/chriskempson/base16-vim
 [submodule "distant/prezto"]
 	path = distant/prezto
 	url = https://github.com/sorin-ionescu/prezto
-[submodule "distant/base16-shell"]
-	path = distant/base16-shell
-	url = https://github.com/chriskempson/base16-shell
+[submodule "distant/base16-xfce4-terminal"]
+	path = distant/base16-xfce4-terminal
+	url = https://github.com/afg984/base16-xfce4-terminal

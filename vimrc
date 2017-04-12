@@ -34,10 +34,7 @@ set undodir=~/.vim_undo/
 
 " COLORS
 
-if filereadable(expand("~/.vimrc_background")) " base16-shell term
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+colorscheme Tomorrow-Night-Eighties
 syntax enable
 filetype plugin on 	" Enable plugins, for netwr
 filetype plugin indent on
