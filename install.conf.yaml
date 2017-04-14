@@ -10,14 +10,12 @@
     # vim
     ~/.vimrc: vimrc
     ~/.vim: vim
-    # distant
-    ./vim/autoload: ./distant/vim-pathogen/autoload
-    ./vim/bundle/hardmode: ./distant/hardmode
-    ./vim/bundle/editorconfig-vim: ./distant/editorconfig-vim
-    ./zprezto: ./distant/prezto
+    ~/.vim/autoload: distant/vim-pathogen/autoload
+    ~/.vim/bundle/hardmode: distant/hardmode
+    ~/.vim/bundle/editorconfig-vim: distant/editorconfig-vim
     # zprezto
     ~/.zpreztorc: zpreztorc
-    ~/.zprezto: zprezto
+    ~/.zprezto: distant/prezto
     # other
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
