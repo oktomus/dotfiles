@@ -9,7 +9,7 @@
     ~/.scripts: scripts
     # vim
     ~/.vimrc: vimrc
-    ~/.vim: vim
+    ~/.vim/colors: vim/colors
     ~/.vim/autoload: distant/vim-pathogen/autoload
     ~/.vim/bundle/hardmode: distant/hardmode
     ~/.vim/bundle/editorconfig-vim: distant/editorconfig-vim
@@ -29,6 +29,7 @@
     ~/.local/share/xfce4/terminal/colorschemes: distant/base16-xfce4-terminal/colorschemes
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p ~/.vim/bundle, Creating main vim directory]
   - [mkdir -p ~/.vim_swap ~/.vim_undo ~/.vim_backup, Creating vim dirs]
 
 
