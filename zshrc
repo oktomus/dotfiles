@@ -11,12 +11,12 @@ export BROWSER=firefox
 
 # Aliases
 
-if [ -f "$HOME/.alias" ]; then
-   source "$HOME/.alias"
+if [ -f "$HOME/.dotfiles/alias" ]; then
+   source "$HOME/.dotfiles/alias"
 fi	
 
 # Functions 
 
-if [ -f "$HOME/.functions" ]; then
-   source "$HOME/.functions"
+if [ -f "$HOME/.dotfiles/functions" ]; then
+   source "$HOME/.dotfiles/functions"
 fi	

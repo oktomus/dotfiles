@@ -13,6 +13,3 @@
 [submodule "distant/prezto"]
 	path = distant/prezto
 	url = https://github.com/sorin-ionescu/prezto
-[submodule "distant/base16-xfce4-terminal"]
-	path = distant/base16-xfce4-terminal
-	url = https://github.com/afg984/base16-xfce4-terminal

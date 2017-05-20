@@ -21,12 +21,9 @@
     ~/.ssh/config:
         path: ssh/config
         create: true
-
     # config
     ~/.config/redshift.conf: config/redshift.conf
-    ~/.config/blender/2.78/config/userpref.blend: config/blender.userpref
-    # xfce
-    ~/.local/share/xfce4/terminal/colorschemes: distant/base16-xfce4-terminal/colorschemes
+    ~/.config/blender/2.78/config/userpref.blend: blender/config/userpref.blend
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [mkdir -p ~/.vim/bundle, Creating main vim directory]
