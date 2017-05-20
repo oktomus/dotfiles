@@ -13,3 +13,6 @@
 [submodule "distant/prezto"]
 	path = distant/prezto
 	url = https://github.com/sorin-ionescu/prezto
+[submodule "blender/2.78/scripts/addons/animation_nodes"]
+	path = blender/2.78/scripts/addons/animation_nodes
+	url = https://github.com/JacquesLucke/animation_nodes.git
