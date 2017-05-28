@@ -53,8 +53,11 @@ set autoindent		" always set autoindenting on
 set backspace=indent,eol,start 		" allow backspacing over everything in insert mode
 set incsearch		" do incremental searching
 set expandtab
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
+set foldmethod=indent foldlevel=99
 
 " INTERFACE
 
@@ -62,6 +65,7 @@ set scrolloff=8		" Offset lines from top when scrolling
 set showcmd		" display incomplete commands
 set ruler		" show the cursor position all the time
 set number
+
 set numberwidth=4
 
 " STATUSLINE
