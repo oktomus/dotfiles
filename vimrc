@@ -36,7 +36,8 @@ set undodir=~/.vim_undo/
 
 colorscheme Tomorrow-Night-Eighties
 syntax enable
-filetype plugin on 	" Enable plugins, for netwr
+syntax on
+filetype plugin on 	
 filetype plugin indent on
 
 " COMMANDS

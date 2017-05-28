@@ -13,6 +13,7 @@
     ~/.vim/autoload: distant/vim-pathogen/autoload
     ~/.vim/bundle/hardmode: distant/hardmode
     ~/.vim/bundle/editorconfig-vim: distant/editorconfig-vim
+    ~/.vim/ftplugin: vim/ftplugin
     # zprezto
     ~/.zpreztorc: zpreztorc
     ~/.zprezto: distant/prezto
