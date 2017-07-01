@@ -56,8 +56,8 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=8
-
 set foldmethod=indent foldlevel=99
+nnoremap <space> za
 
 " INTERFACE
 
@@ -95,7 +95,6 @@ let g:netrw_browse_split=4	" open in prior window
 let g:netrw_altv=1	" open in split mode on the right
 let g:netrw_liststyle=3	" tree view
 
-
 " HARD MODE
 " Prevent me from using the arrow keys
 
@@ -104,4 +103,13 @@ let g:HardMode_hardmodeMsg = "Don't use this!"
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR> 	" The leader is a defined key, \ by default
 
+" PYTHON
 
+" au BufNewFile,BufRead *.py 
+"             \ set tabstop=4
+"             \ set softtabstop=4
+"             \ set shiftwidth=4
+"             \ set textwidth=79
+"             \ set expandtab
+"             \ set autoindent
+"             \ set fileformat=unix
