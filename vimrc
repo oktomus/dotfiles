@@ -2,7 +2,7 @@
 set nocompatible 	" Must be first
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
-   finish
+    finish
 endif
 
 
@@ -37,8 +37,8 @@ set undodir=~/.vim_undo/
 colorscheme Tomorrow-Night-Eighties
 syntax enable
 syntax on
-filetype plugin on 	
-filetype plugin indent on
+filetype on 	
+filetype indent on
 
 " COMMANDS
 
@@ -55,7 +55,7 @@ set incsearch		" do incremental searching
 set expandtab
 set shiftwidth=4
 set softtabstop=4
-set tabstop=4
+set tabstop=8
 
 set foldmethod=indent foldlevel=99
 
