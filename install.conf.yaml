@@ -14,6 +14,8 @@
     ~/.vim/bundle/hardmode: distant/hardmode
     ~/.vim/bundle/editorconfig-vim: distant/editorconfig-vim
     ~/.vim/ftplugin: vim/ftplugin
+    # i3
+    ~/.config/i3/config: i3config
     # zprezto
     ~/.zpreztorc: zpreztorc
     ~/.zprezto: distant/prezto
@@ -29,5 +31,6 @@
   - [git submodule update --init --recursive, Installing submodules]
   - [mkdir -p ~/.vim/bundle, Creating main vim directory]
   - [mkdir -p ~/.vim_swap ~/.vim_undo ~/.vim_backup, Creating vim dirs]
+  - [mkdir -p ~/.config/i3]
 
 
