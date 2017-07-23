@@ -29,6 +29,10 @@ font pango:Terminus (TTF) Medium 12px
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+bindsym $mod+Ctrl+l exec ~/.scripts/lock.sh
+bindsym $mod+Ctrl+f exec firefox
+bindsym $mod+Ctrl+m exec thunderbird
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
