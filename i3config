@@ -33,13 +33,13 @@ floating_modifier $mod
 # Workspaces
 ##############
 
-set $WS1 web
-set $WS2 term
-set $WS3 text
-set $WS4 media
-set $WS5 misc
-set $WS6 system
-set $WS7 office
+set $WS1 web (1)
+set $WS2 term (2)
+set $WS3 lab (3)
+set $WS4 text (4)
+set $WS5 misc (5)
+set $WS6 system (6)
+set $WS7 office (7)
 
 ##############
 # Applications
@@ -67,9 +67,9 @@ for_window [title="Preferences"] floating enable
 ##############
 
 # Web
-assign [class="firefox"] $WS1
+assign [class="Firefox"] $WS1
 # Term
-assign [class="gnome-terminal"] $WS2
+assign [class="[tT]erminal"] $WS2
 # Text
 assign [class="thunderbird"] $WS4
 # Media
@@ -78,7 +78,7 @@ assign [class="vlc"] $WS4
 # Office
 assign [class="libreoffice"] $WS7
 # Misc
-assign [class="Gimp|Pinta|Blender|Catfish|Galculator"] $WS5
+assign [class="Gimp|Pinta|Blender|Catfish|Galculator"] $WS3
 
 ##############
 # Other 
@@ -106,7 +106,6 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
