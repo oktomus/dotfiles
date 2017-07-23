@@ -32,5 +32,6 @@
   - [mkdir -p ~/.vim/bundle, Creating main vim directory]
   - [mkdir -p ~/.vim_swap ~/.vim_undo ~/.vim_backup, Creating vim dirs]
   - [mkdir -p ~/.config/i3]
+  - [mkdir -p ~/.ssh/config.d]
 
 
