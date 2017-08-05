@@ -71,7 +71,8 @@ assign [class="Firefox"] $WS1
 # Term
 assign [class="[tT]erminal"] $WS2
 # Text
-assign [class="thunderbird"] $WS4
+assign [class="Thunderbird"] $WS4
+assign [class="Pidgin"] $WS4
 # Media
 assign [class="mplayer2"] $WS4
 assign [class="vlc"] $WS4
@@ -225,3 +226,7 @@ bindsym Print exec scrot '%Y-%m-%d-%t_$wx$h.png' -e 'mv $f ~/Images/'
 bar {
         status_command i3status
 }
+
+exec firefox
+exec pidgin
+exec thunderbird
