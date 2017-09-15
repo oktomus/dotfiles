@@ -1,0 +1,88 @@
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #a54242
+*.color9:       #cc6666
+
+! green
+*.color2:       #e1f246
+*.color10:      #a8b057
+
+! yellow
+*.color3:       #de935f
+*.color11:      #f0c674
+
+! blue
+*.color4:       #32526c
+*.color12:      #3173ab
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
+!urxvt color scheme:
+
+URxvt*.shading: 15
+
+! Same as xresources
+
+! urxvt settings
+
+! Resource names
+! urxvt --help 2>&1| sed -n '/:  /s/^ */! URxvt*/gp'
+
+URxvt*termName: screen-256color
+URxvt*geometry: 115x40
+URxvt*loginShell: true
+URxvt*visualBell: true
+URxvt*mapAlert: true
+
+URxvt*font: xft:Terminus (TTF):medium:pixelsize=20:antialias=true:hinting=true
+URxvt*boldFont: xft:Terminus (TTF):bold:pixelsize=20:antialias=false:hinting=true
+URxvt*italicFont: xft:Terminus (TTF):italic:pixelsize=20:antialias=false:hinting=true
+URxvt*boldItalicFont: xft:Terminus (TTF):bold:italic:pixelsize=20:antialias=false:hinting=true
+
+URxvt*depth:                24
+URxvt*borderless: 1
+URxvt*scrollBar:            false
+URxvt*saveLines:  2000
+URxvt.transparent:      true
+
+! Meta modifier for keybindings
+!URxvt.modifier: super
+
+!! perl extensions
+URxvt.perl-ext:             default,url-select,clipboard
+URxvt.perl-ext-common:      default,resize-font
+
+
+! url-select (part of urxvt-perls package)
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.url-select.autocopy:  true
+URxvt.url-select.button:    2
+URxvt.url-select.launcher:  chromium
+URxvt.url-select.underline: true
+
+! Nastavuje kopirovani
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+
+! disable the stupid ctrl+shift 'feature'
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
