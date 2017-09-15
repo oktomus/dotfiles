@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Terminus (TTF) Medium 12px
+font pango:Terminus (TTF) Medium 16px
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -28,6 +28,82 @@ font pango:Terminus (TTF) Medium 12px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# No title bar
+for_window [class="^.*"] border pixel 5
+
+# Colors
+
+set_from_resource $darkred     color0  #000000
+set_from_resource $red         color9  #000000
+set_from_resource $darkgreen   color2  #000000
+set_from_resource $green       color10 #000000
+set_from_resource $darkyellow  color3  #000000
+set_from_resource $yellow      color11 #000000
+set_from_resource $darkblue    color4  #000000
+set_from_resource $blue        color12 #000000
+set_from_resource $darkmagenta color5  #000000
+set_from_resource $magenta     color13 #000000
+set_from_resource $darkcyan    color6  #000000
+set_from_resource $cyan        color14 #000000
+set_from_resource $darkwhite   color7  #000000
+set_from_resource $white       color15 #000000
+set $empty #000000
+
+# class                 border  backgr. text    indicator child_border
+client.focused          $red    $red  $darkred  $red      $red
+client.focused_inactive $darkwhite $darkwhite  $darkred  $red      $darkwhite
+client.unfocused        $darkred    $darkred  $darkwhite  $red      $darkred
+client.urgent           $magenta    $magenta  $darkred  $red      $magenta
+client.placeholder      $yellow    $yellow  $darkred  $red      $yellow
+
+client.background       $darkred
+
+#############
+# GAPS
+############
+
+gaps inner 30 
+gaps outer 0
+smart_gaps on
+smart_borders on
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 
 ##############
 # Workspaces
@@ -69,7 +145,8 @@ for_window [title="Preferences"] floating enable
 # Web
 assign [class="Firefox"] $WS1
 # Term
-assign [class="[tT]erminal"] $WS2
+assign [class="[tTgerminal"] $WS2
+assign [class="URxvt"] $WS2
 # Text
 assign [class="Thunderbird"] $WS4
 assign [class="Pidgin"] $WS4
@@ -227,6 +304,7 @@ bar {
         status_command i3status
 }
 
-exec firefox
+#exec firefox
 exec pidgin
-exec thunderbird
+exec --no-startup-id "devmon --no-gui"
+#exec thunderbird
