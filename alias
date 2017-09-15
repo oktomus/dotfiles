@@ -22,7 +22,8 @@ alias l='ls -CF'
 
 # Git
 
-alias gs='git status '
+alias gs='git stat '
+alias gg='git graph '
 alias ga='git add '
 alias gb='git branch '
 alias gc='git commit'
