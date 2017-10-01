@@ -1,43 +1,82 @@
+! HIGH AUTUMN THEME
 ! special
-*.foreground:   #c5c8c6
-*.background:   #1d1f21
-*.cursorColor:  #c5c8c6
+*.foreground:   #f0f0f0
+*.background:   #1b1c1d
+*.cursorColor:  #f0f0f0
 
 ! black
-*.color0:       #282a2e
+*.color0:       #4a515d
 *.color8:       #373b41
 
 ! red
-*.color1:       #a54242
-*.color9:       #cc6666
+*.color1:       #d92b2b
+*.color9:       #a60000
 
 ! green
-*.color2:       #e1f246
-*.color10:      #a8b057
+*.color2:       #bff71d
+*.color10:      #a6a600
 
 ! yellow
-*.color3:       #de935f
-*.color11:      #f0c674
+*.color3:       #f7941d
+*.color11:      #a65800
 
 ! blue
-*.color4:       #32526c
-*.color12:      #3173ab
+*.color4:       #04bef1
+*.color12:      #279bc2
 
 ! magenta
-*.color5:       #85678f
+*.color5:       #c71df7
 *.color13:      #b294bb
 
 ! cyan
-*.color6:       #5e8d87
+*.color6:       #1df7bd
 *.color14:      #8abeb7
 
 ! white
 *.color7:       #707880
 *.color15:      #c5c8c6
 
+! RED THEME
+! ! special
+! *.foreground:   #c5c8c6
+! *.background:   #1d1f21
+! *.cursorColor:  #c5c8c6
+! 
+! ! black
+! *.color0:       #282a2e
+! *.color8:       #373b41
+! 
+! ! red
+! *.color1:       #a54242
+! *.color9:       #cc6666
+! 
+! ! green
+! *.color2:       #e1f246
+! *.color10:      #a8b057
+! 
+! ! yellow
+! *.color3:       #de935f
+! *.color11:      #f0c674
+! 
+! ! blue
+! *.color4:       #32526c
+! *.color12:      #3173ab
+! 
+! ! magenta
+! *.color5:       #85678f
+! *.color13:      #b294bb
+! 
+! ! cyan
+! *.color6:       #5e8d87
+! *.color14:      #8abeb7
+! 
+! ! white
+! *.color7:       #707880
+! *.color15:      #c5c8c6
+
 !urxvt color scheme:
 
-URxvt*.shading: 15
+URxvt*.shading: 10 
 
 ! Same as xresources
 

@@ -34,28 +34,33 @@ for_window [class="^.*"] border pixel 5
 
 # Colors
 
-set_from_resource $darkred     color0  #000000
-set_from_resource $red         color9  #000000
-set_from_resource $darkgreen   color2  #000000
-set_from_resource $green       color10 #000000
-set_from_resource $darkyellow  color3  #000000
-set_from_resource $yellow      color11 #000000
-set_from_resource $darkblue    color4  #000000
-set_from_resource $blue        color12 #000000
-set_from_resource $darkmagenta color5  #000000
-set_from_resource $magenta     color13 #000000
-set_from_resource $darkcyan    color6  #000000
-set_from_resource $cyan        color14 #000000
-set_from_resource $darkwhite   color7  #000000
-set_from_resource $white       color15 #000000
+set_from_resource $grey     color0  #000000
+set_from_resource $red     color1  #000000
+set_from_resource $green     color2  #000000
+set_from_resource $orange     color3  #000000
+set_from_resource $blue     color4  #000000
+set_from_resource $purple     color5  #000000
+set_from_resource $cyan     color6  #000000
+set_from_resource $white     color7  #000000
+set_from_resource $darkgrey     color8  #000000
+set_from_resource $darkred     color9  #000000
+set_from_resource $darkgreen     color10  #000000
+set_from_resource $darkorange     color11  #000000
+set_from_resource $darkblue     color12  #000000
+set_from_resource $darkpurple     color13  #000000
+set_from_resource $darkcyan     color14  #000000
+set_from_resource $darkwhite     color15  #000000
+set_from_resource $foreground     foreground  #000000
+set_from_resource $background     background  #000000
+set_from_resource $cursorcolor     cursorColor  #000000
 set $empty #000000
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $red    $red  $darkred  $red      $red
-client.focused_inactive $darkwhite $darkwhite  $darkred  $red      $darkwhite
-client.unfocused        $darkred    $darkred  $darkwhite  $red      $darkred
-client.urgent           $magenta    $magenta  $darkred  $red      $magenta
-client.placeholder      $yellow    $yellow  $darkred  $red      $yellow
+client.focused          $blue    $blue    $darkgrey  $blue      $blue
+client.focused_inactive $darkgrey $darkgrey  $white  $darkgrey      $darkgrey
+client.unfocused        $grey    $grey  $white  $grey      $grey
+client.urgent           $magenta    $magenta  $white  $magenta      $magenta
+client.placeholder      $cyan    $cyan  $darkgrey  $cyan      $cyan
 
 client.background       $darkred
 
@@ -63,8 +68,8 @@ client.background       $darkred
 # GAPS
 ############
 
-gaps inner 30 
-gaps outer 0
+gaps inner 10 
+gaps outer 10
 smart_gaps on
 smart_borders on
 
@@ -130,6 +135,15 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+e exec thunar
 
 ##############
+# Audio
+##############
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+##############
 # Classes
 ##############
 
@@ -149,6 +163,7 @@ assign [class="[tTgerminal"] $WS2
 assign [class="URxvt"] $WS2
 # Text
 assign [class="Thunderbird"] $WS4
+assign [class="TeamSpeak 3"] $WS4
 assign [class="Pidgin"] $WS4
 # Media
 assign [class="mplayer2"] $WS4
