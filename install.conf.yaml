@@ -26,8 +26,9 @@
         create: true
     # config
     ~/.config/redshift.conf: config/redshift.conf
-    # Xresources
+    # Xorg
     ~/.Xresources: Xresources
+    ~/.xinitrc: xinitrc
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [mkdir -p ~/.vim/bundle, Creating main vim directory]
