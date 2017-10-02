@@ -320,6 +320,5 @@ bar {
 }
 
 #exec firefox
-exec pidgin
 exec --no-startup-id "devmon --no-gui"
 #exec thunderbird
