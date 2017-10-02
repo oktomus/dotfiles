@@ -7,6 +7,8 @@ xrdb ~/.Xresources
 # Private xinit steps 
 [[ -f ~/.xinit_local ]] && sh ~/.xinit_local
 
+xset -b
+
 # Swape escape and caps
 setxkbmap -option caps:swapescape
 redshift &
