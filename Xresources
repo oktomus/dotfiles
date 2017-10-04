@@ -91,10 +91,10 @@ URxvt*loginShell: true
 URxvt*visualBell: true
 URxvt*mapAlert: true
 
-URxvt*font: xft:Terminus (TTF):medium:pixelsize=20:antialias=true:hinting=true
-URxvt*boldFont: xft:Terminus (TTF):bold:pixelsize=20:antialias=false:hinting=true
-URxvt*italicFont: xft:Terminus (TTF):italic:pixelsize=20:antialias=false:hinting=true
-URxvt*boldItalicFont: xft:Terminus (TTF):bold:italic:pixelsize=20:antialias=false:hinting=true
+URxvt*font: xft:Terminus (TTF):medium::antialias=true:hinting=true
+URxvt*boldFont: xft:Terminus (TTF):bold::antialias=false:hinting=true
+URxvt*italicFont: xft:Terminus (TTF):italic::antialias=false:hinting=true
+URxvt*boldItalicFont: xft:Terminus (TTF):bold:italic::antialias=false:hinting=true
 
 URxvt*depth:                24
 URxvt*borderless: 1
