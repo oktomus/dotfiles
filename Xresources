@@ -91,10 +91,10 @@ URxvt*loginShell: true
 URxvt*visualBell: true
 URxvt*mapAlert: true
 
-URxvt*font: xft:Terminus (TTF):medium::antialias=true:hinting=true
-URxvt*boldFont: xft:Terminus (TTF):bold::antialias=false:hinting=true
-URxvt*italicFont: xft:Terminus (TTF):italic::antialias=false:hinting=true
-URxvt*boldItalicFont: xft:Terminus (TTF):bold:italic::antialias=false:hinting=true
+URxvt*font: xft:Terminus (TTF):medium:size=10:antialias=true:hinting=true
+URxvt*boldFont: xft:Terminus (TTF):bold:size=10:antialias=false:hinting=true
+URxvt*italicFont: xft:Terminus (TTF):italic:size=10:antialias=false:hinting=true
+URxvt*boldItalicFont: xft:Terminus (TTF):bold:italic:size=10:antialias=false:hinting=true
 
 URxvt*depth:                24
 URxvt*borderless: 1
@@ -109,6 +109,12 @@ URxvt.transparent:      true
 URxvt.perl-ext:             default,url-select,clipboard
 URxvt.perl-ext-common:      default,resize-font
 
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
 
 ! url-select (part of urxvt-perls package)
 URxvt.keysym.M-u:           perl:url-select:select_next
