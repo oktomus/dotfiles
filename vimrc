@@ -155,3 +155,9 @@ nnoremap <leader>h <Esc>:call ToggleHardMode()<CR> 	" The leader is a defined ke
 "             \ set expandtab
 "             \ set autoindent
 "             \ set fileformat=unix
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FileType
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" MAKEFILE
+autocmd FileType make setlocal noexpandtab
