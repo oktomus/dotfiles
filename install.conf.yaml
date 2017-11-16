@@ -1,5 +1,12 @@
 - clean: ['~']
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p ~/.vim/bundle, Creating main vim directory]
+  - [mkdir -p ~/.vim_swap ~/.vim_undo ~/.vim_backup, Creating vim dirs]
+  - [mkdir -p ~/.config/i3]
+  - [mkdir -p ~/.ssh/config.d]
+  - ["curl https://raw.githubusercontent.com/fneu/breezy/master/colors/breezy.vim > vim/colors/breezy.vim"]
 - link:
     # tmux
     ~/.tmux.conf: tmux.conf
@@ -29,11 +36,5 @@
     # Xorg
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - [mkdir -p ~/.vim/bundle, Creating main vim directory]
-  - [mkdir -p ~/.vim_swap ~/.vim_undo ~/.vim_backup, Creating vim dirs]
-  - [mkdir -p ~/.config/i3]
-  - [mkdir -p ~/.ssh/config.d]
 
 

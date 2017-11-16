@@ -76,7 +76,7 @@
 
 !urxvt color scheme:
 
-URxvt*.shading: 10 
+URxvt*.shading: 0 
 
 ! Same as xresources
 

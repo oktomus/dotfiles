@@ -58,7 +58,9 @@ autocmd FileType python         set tags=.tags_python,$HOME/.vim/tags/python
 " COLORS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme Tomorrow-Night-Eighties
+"set background=dark
+"set termguicolors
+colorscheme breezy
 syntax enable
 syntax on
 filetype on 	
