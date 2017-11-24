@@ -10,6 +10,9 @@
 	unstage = reset HEAD --
 	cached = diff --cached
 	d = difftool
+        co = checkout
+        pom = push origin master
+        pl = pull
 [core]
 	editor = vim
 [diff]
