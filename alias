@@ -45,3 +45,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# Tree
+
+alias otree='/usr/bin/tree'
+alias tree='otree -aI "__pycache__|.git"'
