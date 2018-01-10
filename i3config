@@ -165,6 +165,7 @@ assign [class="[tTgerminal"] $WS2
 assign [class="URxvt"] $WS2
 # Text
 assign [class="Thunderbird"] $WS4
+assign [class="^urxvt$" instance="^weechat$"] $WS4
 assign [class="TeamSpeak 3"] $WS4
 assign [class="Pidgin"] $WS4
 # Media
