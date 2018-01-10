@@ -8,10 +8,8 @@ xrdb ~/.Xresources
 [[ -f ~/.xinit_local ]] && sh ~/.xinit_local
 
 xset -b
-
 # Swape escape and caps
 setxkbmap -option caps:swapescape
-redshift &
-~/.fehbg &
-urxvt -name weechat -e weechat &
-exec i3
+
+for f in ~/.i3log/log-*; do mv "$f" "$f.old"; done
+exec /usr/bin/i3 >~/.i3log/log-$(date +'%F-%k-%M-%S') 2>&1

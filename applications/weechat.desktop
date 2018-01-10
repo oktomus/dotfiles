@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=WeeChat in URxvt
+Comment=IRC Client
+# The path to the folder in which the executable is run
+Exec=/usr/bin/urxvt -name weechat -e weechat
+Terminal=false

@@ -7,6 +7,7 @@
   - [mkdir -p ~/.config/i3]
   - [mkdir -p ~/.ssh/config.d]
   - ["curl https://raw.githubusercontent.com/fneu/breezy/master/colors/breezy.vim > vim/colors/breezy.vim"]
+  - [chmod u+x scripts/*]
 - link:
     # tmux
     ~/.tmux.conf: tmux.conf
@@ -39,6 +40,6 @@
     # Polybar
     ~/.config/polybar/config: polybar
     ~/.config/polybar/launch.sh: scripts/polybar_launch.sh
-
-
+    # Applications
+    ~/.local/share/applications/weechat.desktop: applications/weechat.desktop
 

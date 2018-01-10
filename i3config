@@ -162,10 +162,10 @@ for_window [title="float-*"] floating enable
 assign [class="Firefox"] $WS1
 # Term
 assign [class="[tTgerminal"] $WS2
+assign [class="URxvt" instance="weechat"] $WS4
 assign [class="URxvt"] $WS2
 # Text
 assign [class="Thunderbird"] $WS4
-assign [class="^urxvt$" instance="^weechat$"] $WS4
 assign [class="TeamSpeak 3"] $WS4
 assign [class="Pidgin"] $WS4
 # Media
@@ -322,7 +322,10 @@ bindsym Print exec ~/.scripts/direct_screenshot.sh
 #        status_command i3status
 #}
 
-#exec firefox
 exec --no-startup-id "devmon --no-gui"
+exec --no-startup-id $HOME/.scripts/launch_weechat.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id redshift
+exec --no-startup-id $HOME/.fehbg
+
 #exec thunderbird
