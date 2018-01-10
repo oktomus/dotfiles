@@ -151,7 +151,7 @@ for_window [class="Gpick"] floating enabled
 # Popus
 for_window [window_role="pop-up"] floating enable,move absolute center
 for_window [title="Preferences"] floating enable
-for_window [title="TurtleSDK"] floating enable
+for_window [title="^TurtleSDK$"] floating enable
 for_window [title="float-*"] floating enable
 
 ##############
