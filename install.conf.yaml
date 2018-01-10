@@ -36,5 +36,9 @@
     # Xorg
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
+    # Polybar
+    ~/.config/polybar/config: polybar
+    ~/.config/polybar/launch.sh: scripts/polybar_launch.sh
+
 
 

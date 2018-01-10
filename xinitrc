@@ -14,5 +14,4 @@ setxkbmap -option caps:swapescape
 redshift &
 ~/.fehbg &
 urxvt -name weechat -e weechat &
-
 exec i3
