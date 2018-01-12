@@ -113,13 +113,13 @@ mode "$mode_gaps_outer" {
 # Workspaces
 ##############
 
-set $WS1 web (1)
-set $WS2 term (2)
-set $WS3 lab (3)
-set $WS4 text (4)
-set $WS5 misc (5)
-set $WS6 system (6)
-set $WS7 office (7)
+set $WS1 1
+set $WS2 2
+set $WS3 3
+set $WS4 4
+set $WS5 5
+set $WS6 6
+set $WS7 7
 
 ##############
 # Applications
