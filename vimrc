@@ -77,6 +77,22 @@ set history=50		" keep 50 lines of command line history
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set autoindent		" always set autoindenting on
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,nbsp:␣
+set list
+set showmatch
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" AUTO COMPLETE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set ofu=syntaxcomplete#Complete
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SPELL CHECKING
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+setlocal spelllang=en_US
+map <F5> :setlocal spell!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EDITING 
@@ -84,21 +100,50 @@ set autoindent		" always set autoindenting on
 
 set backspace=indent,eol,start 		" allow backspacing over everything in insert mode
 set incsearch		" do incremental searching
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=8
+
 set foldmethod=indent foldlevel=99
 nnoremap <space> za
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" COL/ROW 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set cul
+set scrolloff=3		" Offset lines from top when scrolling
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TABS 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set shiftwidth=4
+set tabstop=4
+set smarttab
+
+" MAKEFILE
+autocmd FileType make setlocal noexpandtab
+" PYTHON
+autocmd FileType python setlocal expandtab
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" INDENT 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set autoindent
+set smartindent
+set ci
+set cin
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " INTERFACE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set scrolloff=8		" Offset lines from top when scrolling
 set showcmd		" display incomplete commands
 set ruler		" show the cursor position all the time
 set number
+
+" set colorcolumn=120
+autocmd BufEnter * set colorcolumn=120 " all
+autocmd BufEnter *.py set colorcolumn=80 " python
 
 set numberwidth=4
 
@@ -125,6 +170,7 @@ set laststatus=2
 
 set path+=**		" search into subfolders
 set wildmenu		" display all matching when tab 
+set autochdir " Change working dir when switching files
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE BROWSING
@@ -161,5 +207,5 @@ nnoremap <leader>h <Esc>:call ToggleHardMode()<CR> 	" The leader is a defined ke
 " FileType
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" MAKEFILE
-autocmd FileType make setlocal noexpandtab
+filetype plugin on
+filetype indent on
