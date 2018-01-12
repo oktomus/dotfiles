@@ -139,7 +139,7 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 5
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
@@ -164,7 +164,7 @@ label-urgent = %icon%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
-label-mode-font = 3
+label-mode-font = 1
 label-visible-font = 3
 label-focused-font = 3
 label-unfocused-font = 3
