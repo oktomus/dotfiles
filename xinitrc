@@ -11,5 +11,5 @@ xset -b
 # Swape escape and caps
 setxkbmap -option caps:swapescape
 
-for f in ~/.i3log/log-*; do mv "$f" "$f.old"; done
-exec /usr/bin/i3 >~/.i3log/log-$(date +'%F-%k-%M-%S') 2>&1
+for f in ~/.i3log/log-*.txt; do mv "$f" "$f.old"; done
+exec /usr/bin/i3 >~/.i3log/log-$(date +'%F-%k-%M-%S').txt 2>&1

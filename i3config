@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Terminus (TTF) Medium 12px
+font pango:Unifont Medium 12px
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -30,7 +30,7 @@ font pango:Terminus (TTF) Medium 12px
 floating_modifier $mod
 
 # No title bar
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 3
 
 # Colors
 
@@ -59,9 +59,8 @@ set $empty #000000
 client.focused          $blue    $blue    $darkgrey  $blue      $blue
 client.focused_inactive $darkgrey $darkgrey  $white  $darkgrey      $darkgrey
 client.unfocused        $grey    $grey  $white  $grey      $grey
-client.urgent           $magenta    $magenta  $white  $magenta      $magenta
+client.urgent           $red    $red  $white  $red      $red
 client.placeholder      $cyan    $cyan  $darkgrey  $cyan      $cyan
-
 client.background       $darkred
 
 #############
@@ -176,6 +175,8 @@ assign [class="libreoffice"] $WS7
 # Misc
 assign [class="Gimp|Pinta|Blender|Catfish|Galculator"] $WS3
 
+bindsym $mod+Shift+i [class="URxvt" instance="weechat"] focus
+
 ##############
 # Other 
 ##############
@@ -270,6 +271,14 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# Jump to urgent window
+bindsym $mod+u [urgent=latest] focus
+
+# Repress the workspace shortcut to go the last workspace
+workspace_auto_back_and_forth yes
+# The last two workspaces
+bindsym $mod+z workspace back_and_forth
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -323,6 +332,7 @@ bindsym Print exec ~/.scripts/direct_screenshot.sh
 #}
 
 exec --no-startup-id "devmon --no-gui"
+exec --no-startup-id "dunst -conf $HOME/.config/dunst/dunstrc"
 exec --no-startup-id $HOME/.scripts/launch_weechat.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id redshift
