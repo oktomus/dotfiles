@@ -154,6 +154,8 @@ for_window [class="^TurtleSDK$"] floating enable
 for_window [class="^D2DP$"] floating enable
 for_window [title="float-*"] floating enable
 for_window [class="URxvt" instance="weechat"] layout tabbed
+for_window [class="keepass2"] layout tabbed
+for_window [class="Firefox"] layout tabbed
 for_window [class="Thunuderbird"] layout tabbed
 
 ##############
@@ -162,6 +164,7 @@ for_window [class="Thunuderbird"] layout tabbed
 
 # Web
 assign [class="Firefox"] $WS1
+assign [class="keepass2"] $WS1
 # Term
 assign [class="[tTgerminal"] $WS2
 assign [class="URxvt" instance="weechat"] $WS4
