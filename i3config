@@ -155,6 +155,7 @@ for_window [class="^D2DP$"] floating enable
 for_window [title="float-*"] floating enable
 for_window [class="URxvt" instance="weechat"] layout tabbed
 for_window [class="keepass2"] layout tabbed
+for_window [title="qtcreator_process_stub"] floating enabled
 for_window [class="Firefox"] layout tabbed
 for_window [class="Thunuderbird"] layout tabbed
 
