@@ -154,7 +154,7 @@ for_window [class="^TurtleSDK$"] floating enable
 for_window [class="^D2DP$"] floating enable
 for_window [title="float-*"] floating enable
 for_window [class="URxvt" instance="weechat"] layout tabbed
-for_window [class="keepass2"] layout tabbed
+for_window [class="KeePass2"] layout tabbed
 for_window [title="qtcreator_process_stub"] floating enabled
 for_window [class="Firefox"] layout tabbed
 for_window [class="Thunuderbird"] layout tabbed
@@ -162,10 +162,12 @@ for_window [class="Thunuderbird"] layout tabbed
 ##############
 # Worskpaces assignement
 ##############
+#
+# USE xprop or xwininfo
 
 # Web
 assign [class="Firefox"] $WS1
-assign [class="keepass2"] $WS1
+assign [class="KeePass2"] $WS5
 # Term
 assign [class="[tTgerminal"] $WS2
 assign [class="URxvt" instance="weechat"] $WS4
@@ -282,7 +284,7 @@ bindsym $mod+Shift+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit sh
 bindsym $mod+u [urgent=latest] focus
 
 # Repress the workspace shortcut to go the last workspace
-workspace_auto_back_and_forth yes
+# workspace_auto_back_and_forth yes
 # The last two workspaces
 bindsym $mod+z workspace back_and_forth
 
@@ -340,7 +342,7 @@ bindsym Print exec ~/.scripts/direct_screenshot.sh
 
 exec --no-startup-id "devmon --no-gui"
 exec --no-startup-id "dunst -conf $HOME/.config/dunst/dunstrc"
-exec --no-startup-id $HOME/.scripts/launch_weechat.sh; layout tabbed
+#exec --no-startup-id $HOME/.scripts/launch_weechat.sh; layout tabbed
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id redshift
 exec --no-startup-id keepass
