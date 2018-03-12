@@ -147,6 +147,9 @@ autocmd BufEnter *.py set colorcolumn=80 " python
 
 set numberwidth=4
 
+" Line wrap for comments
+set formatoptions-=t
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUSLINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
