@@ -48,4 +48,4 @@ fi
 # Tree
 
 alias otree='/usr/bin/tree'
-alias tree='otree -aI "__pycache__|.git"'
+alias tree='otree -aI "__pycache__|.git|build"'
