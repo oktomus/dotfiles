@@ -176,10 +176,8 @@ assign [class="Gimp|Pinta|Blender|Catfish|Galculator"] $WS3
 # kill focused window
 bindsym $mod+Shift+w kill
 
-# start dmenu 
-bindsym $mod+Shift+space exec dmenu_run
-# with only .desktop
-bindsym $mod+space exec --no-startup-id i3-dmenu-desktop
+# start rofi 
+bindsym $mod+space exec rofi -show run
 
 # change focus
 bindsym $mod+h focus left
