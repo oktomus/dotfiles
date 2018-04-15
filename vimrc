@@ -71,6 +71,7 @@ filetype indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set history=50		" keep 50 lines of command line history
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CODING
@@ -173,7 +174,7 @@ set laststatus=2
 
 set path+=**		" search into subfolders
 set wildmenu		" display all matching when tab 
-set autochdir " Change working dir when switching files
+" set autochdir " Change working dir when switching files. Use %% instead.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE BROWSING
