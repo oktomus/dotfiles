@@ -317,7 +317,6 @@ exec --no-startup-id "devmon --no-gui"
 exec --no-startup-id "dunst -conf $HOME/.config/dunst/dunstrc"
 #exec --no-startup-id $HOME/.scripts/launch_weechat.sh; layout tabbed
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id redshift
 exec --no-startup-id keepass
 exec --no-startup-id $HOME/.fehbg
 
