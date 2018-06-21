@@ -6,6 +6,9 @@ fi
 # Required for ruby gems to work
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
+# Required for Rez to work
+PATH="/home/oktomus/packages/rez/bin/rez:$PATH"
+
 export EDITOR=vim
 export BROWSER=firefox
 
