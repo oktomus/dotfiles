@@ -15,6 +15,7 @@ execute pathogen#infect()
 let $LANG = 'en'
 set langmenu=en_US.UTF-8
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BACKUP/UNDO
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -36,22 +37,13 @@ set backupdir=~/.vim_backup/,~/tmp,.
 " set undofile
 set undodir=~/.vim_undo/
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CTAGS/CSCOPE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Default/Generic tag file
-set tags=tags,.tags
 
-" Filetype specific tag files (This is used for global IDE tags)
-autocmd FileType c              set tags=.tags_cpp,$HOME/.vim/tags/cpp
-autocmd FileType cpp            set tags=.tags_cpp,$HOME/.vim/tags/cpp
-autocmd FileType css            set tags=.tags_css,$HOME/.vim/tags/css
-autocmd FileType java           set tags=.tags_java,$HOME/.vim/tags/java
-autocmd FileType javascript     set tags=.tags_js,$HOME/.vim/tags/js
-autocmd FileType html           set tags=.tags_html,$HOME/.vim/tags/html
-autocmd FileType php            set tags=.tags_php,$HOME/.vim/tags/php
-autocmd FileType sh             set tags=.tags_sh,$HOME/.vim/tags/sh
-autocmd FileType python         set tags=.tags_python,$HOME/.vim/tags/python
+" Default/Generic tag file
+set tags=./tags,tags
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -66,12 +58,14 @@ syntax on
 filetype on 	
 filetype indent on
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COMMANDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set history=50		" keep 50 lines of command line history
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CODING
@@ -82,11 +76,13 @@ set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,nbsp:␣
 set list
 set showmatch
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTO COMPLETE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set ofu=syntaxcomplete#Complete
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SPELL CHECKING
@@ -94,6 +90,7 @@ set ofu=syntaxcomplete#Complete
 
 setlocal spelllang=en_US
 map <F5> :setlocal spell!<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EDITING 
@@ -105,12 +102,14 @@ set incsearch		" do incremental searching
 set foldmethod=indent foldlevel=99
 nnoremap <space> za
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COL/ROW 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set cul
 set scrolloff=3		" Offset lines from top when scrolling
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TABS 
@@ -125,6 +124,7 @@ autocmd FileType make setlocal noexpandtab
 " PYTHON
 autocmd FileType python setlocal expandtab
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " INDENT 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -133,6 +133,7 @@ set autoindent
 set smartindent
 set ci
 set cin
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " INTERFACE
@@ -151,6 +152,7 @@ set numberwidth=4
 " Line wrap for comments
 set formatoptions-=t
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUSLINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -168,6 +170,7 @@ set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 set laststatus=2
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILES
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -175,6 +178,7 @@ set laststatus=2
 set path+=**		" search into subfolders
 set wildmenu		" display all matching when tab 
 " set autochdir " Change working dir when switching files. Use %% instead.
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILE BROWSING
@@ -185,6 +189,7 @@ let g:netrw_browse_split=4	" open in prior window
 let g:netrw_altv=1	" open in split mode on the right
 let g:netrw_liststyle=3	" tree view
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " HARD MODE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -194,6 +199,7 @@ let g:HardMode_level = 'wannabe'
 let g:HardMode_hardmodeMsg = "Don't use this!"
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR> 	" The leader is a defined key, \ by default
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PYTHON
@@ -207,9 +213,12 @@ nnoremap <leader>h <Esc>:call ToggleHardMode()<CR> 	" The leader is a defined ke
 "             \ set expandtab
 "             \ set autoindent
 "             \ set fileformat=unix
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FileType
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin on
 filetype indent on
+

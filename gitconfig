@@ -22,6 +22,7 @@
 	rignored = "!f(){ git -C \"$GIT_PREFIX\" status -s --ignored \"$@\" | grep \"^!!\";}; f"
 [core]
 	editor = vim
+	excludesfile = /home/oktomus/.dotfiles/gitignore
 [diff]
 	tool = vimdiff
 [difftool]
