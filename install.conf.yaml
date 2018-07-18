@@ -13,7 +13,10 @@
     ~/.tmux.conf: tmux.conf
     # zsh
     ~/.zshrc: zshrc
+    ~/.zprofile: zprofile
+    ~/.profile: zprofile
     # bash
+    ~/.bash_profile: bash_profile
     ~/.scripts: scripts
     # vim
     ~/.vimrc: vimrc
