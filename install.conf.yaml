@@ -47,4 +47,6 @@
     ~/.local/share/applications/weechat.desktop: applications/weechat.desktop
     # Dunst
     ~/.config/dunst/dunstrc: dunstrc
+    # rez
+    ~/.rezconfig: rezconfig
 
