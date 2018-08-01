@@ -49,4 +49,8 @@
     ~/.config/dunst/dunstrc: dunstrc
     # rez
     ~/.rezconfig: rezconfig
+    # pam
+    ~/.pam_environment: pam_environment
+    # services
+    ~/.config/systemd/user/ssh-agent.service: services/ssh-agent.service
 

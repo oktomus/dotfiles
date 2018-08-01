@@ -23,3 +23,4 @@ fi
 if [ -f "$HOME/.dotfiles/functions" ]; then
    source "$HOME/.dotfiles/functions"
 fi	
+
