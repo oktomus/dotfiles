@@ -99,6 +99,7 @@ set $WS4 4
 set $WS5 5
 set $WS6 6
 set $WS7 7
+set $Desktop 8
 
 ##############
 # Launch shortcuts
@@ -152,7 +153,7 @@ for_window [title="float-*"]                    floating enable
 for_window [class="URxvt" instance="weechat"]   layout tabbed
 for_window [class="KeePass2"]                   layout tabbed
 for_window [title="qtcreator_process_stub"]     floating enabled
-for_window [class="Firefox"]                    layout tabbed
+# for_window [class="Firefox"]                    layout tabbed
 for_window [class="Thunuderbird"]               layout tabbed
 
 ##############
@@ -229,10 +230,10 @@ bindsym $mod+Shift+a floating toggle
 bindsym $mod+a focus mode_toggle
 
 # focus the parent container
-bindsym $mod+q focus parent
+bindsym $mod+p focus parent
 
 # focus the child container
-bindsym $mod+d focus child
+bindsym $mod+c focus child
 
 # switch to workspace
 bindsym $mod+ampersand workspace $WS1
@@ -242,9 +243,7 @@ bindsym $mod+apostrophe workspace $WS4
 bindsym $mod+parenleft workspace $WS5
 bindsym $mod+minus workspace $WS6
 bindsym $mod+egrave workspace $WS7
-bindsym $mod+underscore workspace 8
-bindsym $mod+ccedilla workspace 9
-bindsym $mod+agrave workspace 10
+bindsym $mod+d workspace $Desktop
 
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace $WS1
@@ -254,14 +253,12 @@ bindsym $mod+Shift+apostrophe move container to workspace $WS4
 bindsym $mod+Shift+5 move container to workspace $WS5
 bindsym $mod+Shift+minus move container to workspace $WS6
 bindsym $mod+Shift+egrave move container to workspace $WS7
-bindsym $mod+Shift+underscore move container to workspace 8
-bindsym $mod+Shift+ccedilla move container to workspace 9
-bindsym $mod+Shift+agrave move container to workspace 10
+bindsym $mod+Shift+d move container to workspace $Desktop
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+Alt+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+Ctrl+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
