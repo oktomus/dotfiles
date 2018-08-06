@@ -1,0 +1,42 @@
+conky.config = {
+	background = true,
+	update_interval = 1.0,
+	total_run_times = 0,
+
+	double_buffer = true,
+	no_buffers = true,
+	text_buffer_size = 2048,
+
+	gap_x = 40,
+	gap_y = 60,
+	minimum_width = 880, minimum_height = 120,
+	maximum_width = 880, 
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
+	own_window_argb_value = 0,
+	own_window_argb_visual = false,
+	own_window_colour = '#00000000',
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+	alignment = 'bottom_left',
+
+	use_xft = true,
+	xftalpha = 0.1,
+	override_utf8_locale = true,
+
+	draw_borders = false,
+	draw_outline = false,
+	draw_shades = false,
+
+	default_color = '#213D64',
+	color0 = '#3F657A',
+};
+
+conky.text = [[
+${color}${font OpenSans:pixelsize=100}${time %k:%M:%S}\
+${font}${voffset -72}${offset 10}${color0}${font OpenSans:bold:pixelsize=42}${time %d} ${time %B}\
+${font}${voffset 17}${offset 4}${font OpenSans:pixelsize=38}${offset -160}${time %A}${font}
+]];
+

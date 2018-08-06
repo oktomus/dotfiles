@@ -37,6 +37,8 @@
         create: true
     # config
     ~/.config/redshift.conf: config/redshift.conf
+    # conky
+    ~/.config/conky: conky
     # Xorg
     ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
