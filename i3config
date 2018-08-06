@@ -7,40 +7,54 @@ font pango:Unifont Medium 12px
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 5
 
 #############
 # COLORS
 ############
 
-set_from_resource $grey     	color0  #000000
-set_from_resource $red     		color1  #000000
-set_from_resource $green     	color2  #000000
-set_from_resource $orange     	color3  #000000
-set_from_resource $blue     	color4  #000000
-set_from_resource $purple     	color5  #000000
-set_from_resource $cyan     	color6  #000000
-set_from_resource $white     	color7  #000000
-set_from_resource $darkgrey     color8  #000000
-set_from_resource $darkred     	color9  #000000
-set_from_resource $darkgreen    color10  #000000
-set_from_resource $darkorange   color11  #000000
-set_from_resource $darkblue     color12  #000000
-set_from_resource $darkpurple   color13  #000000
-set_from_resource $darkcyan     color14  #000000
-set_from_resource $darkwhite    color15  #000000
-set_from_resource $foreground   foreground  #000000
-set_from_resource $background   background  #000000
-set_from_resource $cursorcolor  cursorColor  #000000
-set $empty #000000
+set $border_focused 					#C9D5D5
+set $border_unfocused 					#2D506E
+set $urgent								#E9253C
+set $text								#06091C
 
-# class                 border  		backgr. 		text    	indicator 	child_border
-client.focused          $blue    		$blue    		$darkgrey  	$blue      	$blue
-client.focused_inactive $darkgrey 		$darkgrey  		$white  	$darkgrey   $darkgrey
-client.unfocused        $grey    		$grey  			$white  	$grey     	$grey
-client.urgent           $red    		$red  			$white  	$red      	$red
-client.placeholder      $cyan    		$cyan  			$darkgrey  	$cyan     	$cyan
-client.background       $darkred
+# class
+# - border
+# - background
+# - text
+# - indicator
+# - child border
+
+client.focused \
+	$border_focused \
+	$border_focused \
+	$text \
+	$border_focused \
+	$border_focused
+client.focused_inactive \
+	$border_unfocused \
+	$border_unfocused \
+	$text \
+	$border_unfocused \
+	$border_unfocused 
+client.unfocused \
+	$border_unfocused \
+	$border_unfocused \
+	$text \
+	$border_unfocused \
+	$border_unfocused
+client.urgent \
+	$urgent \
+	$urgent \
+	$text \
+	$urgent \
+	$urgent
+client.placeholder \
+	$urgent \
+	$urgent \
+	$text \
+	$urgent \
+	$urgent
 
 #############
 # GAPS
