@@ -73,9 +73,9 @@ font-0 = Terminus (TTF):pixelsize=9:weight=medium:antialias=false
 font-1 = IconBitOne:pixelsize=9:weight=medium:antialias=false
 font-2 = IconBitTwo:pixelsize=9:weight=medium:antialias=false
 
-modules-left = i3 xwindow
+modules-left = i3 
 modules-center = date
-modules-right = filesystem xbacklight volume memory cpu wlan eth battery temperature powermenu
+modules-right = cpu filesystem xbacklight volume memory wlan eth battery temperature powermenu
 
 tray-position = right
 tray-padding = 2
@@ -95,10 +95,6 @@ wm-restack = i3
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -211,10 +207,30 @@ card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
-interval = 2
+interval = 0.5
+
+format = <label> <ramp-coreload>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-label = %percentage:2%%
+label = cpu 
+
+label-padding-right = 1
+ramp-coreload-0 = ▁
+ramp-coreload-0-foreground = #4b4e54
+ramp-coreload-1 = ▂
+ramp-coreload-1-foreground = #4b4e54
+ramp-coreload-2 = ▃
+ramp-coreload-2-foreground = #929292
+ramp-coreload-3 = ▄
+ramp-coreload-3-foreground = #d7cebc
+ramp-coreload-4 = ▅
+ramp-coreload-4-foreground = #e0bd7b
+ramp-coreload-5 = ▆
+ramp-coreload-5-foreground = #e3b358
+ramp-coreload-6 = ▇
+ramp-coreload-6-foreground = #fd7736
+ramp-coreload-7 = █
+ramp-coreload-7-foreground = #f53636
 
 [module/memory]
 type = internal/memory
