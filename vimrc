@@ -202,23 +202,15 @@ nnoremap <leader>h <Esc>:call ToggleHardMode()<CR> 	" The leader is a defined ke
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PYTHON
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" au BufNewFile,BufRead *.py 
-"             \ set tabstop=4
-"             \ set softtabstop=4
-"             \ set shiftwidth=4
-"             \ set textwidth=79
-"             \ set expandtab
-"             \ set autoindent
-"             \ set fileformat=unix
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FileType
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin on
 filetype indent on
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" C/CPP
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+autocmd FileType c,cpp setlocal shiftwidth=4 tabstop=4 expandtab
