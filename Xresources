@@ -91,10 +91,7 @@ URxvt*loginShell: true
 URxvt*visualBell: true
 URxvt*mapAlert: true
 
-URxvt*font: xft:Unifont:medium:size=12:antialias=true:hinting=true
-URxvt*boldFont: xft:Unifont:bold:size=12:antialias=true:hinting=true
-URxvt*italicFont: xft:Unifont:italic:size=12:antialias=true:hinting=true
-URxvt*boldItalicFont: xft:Unifont:bold:italic:size=12:antialias=true:hinting=true
+URxvt.font:     xft:Unifont:size=13:antialias=true
 
 URxvt*depth:                24
 URxvt*borderless: 1
