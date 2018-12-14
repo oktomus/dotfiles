@@ -216,3 +216,4 @@ au BufRead,BufNewFile *.ds set filetype=rgbds                   " GameBoy Assemb
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd FileType c,cpp setlocal shiftwidth=4 tabstop=4 expandtab
+autocmd FileType rgbds setlocal shiftwidth=4 tabstop=4 expandtab
