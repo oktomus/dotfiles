@@ -25,6 +25,7 @@
     ~/.vim/bundle/hardmode: distant/hardmode
     ~/.vim/bundle/editorconfig-vim: distant/editorconfig-vim
     ~/.vim/ftplugin: vim/ftplugin
+    ~/.vim/syntax: vim/syntax
     # i3
     ~/.config/i3/config: i3config
     # zprezto

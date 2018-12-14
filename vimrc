@@ -208,6 +208,8 @@ nnoremap <leader>h <Esc>:call ToggleHardMode()<CR> 	" The leader is a defined ke
 filetype plugin on
 filetype indent on
 
+au BufRead,BufNewFile *.ds set filetype=rgbds                   " GameBoy Assembly
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " C/CPP
