@@ -91,7 +91,9 @@ URxvt*loginShell: true
 URxvt*visualBell: true
 URxvt*mapAlert: true
 
-URxvt.font:     xft:Terminus (TTF):size=9:antialias=true
+URxvt.font:         xft:Inconsolata:size=12:antialias=true
+URxvt.boldFont:     xft:Inconsolata:bold:size=12:antialias=true
+URxvt.letterSpace:  -1
 
 URxvt*depth:                24
 URxvt*borderless: 			1
